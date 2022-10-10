@@ -1,10 +1,11 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import "./Courses.css";
+import { Link } from "react-router-dom";
 
 const Courses = ({ course }) => {
-  const { logo, name } = course;
-  console.log(course);
+  const { logo, name, id } = course;
+  //console.log(course);
   return (
     <div className="exercise-container">
       <img src={logo} alt="" />
@@ -20,7 +21,9 @@ const Courses = ({ course }) => {
           <p>
             Time required: <span className="smallInfo">{timerequired}s</span>
           </p> */}
-        <button className="addlistBtn ">Add to list</button>
+        <Link to={`/course/${id}`}>
+          <button className="addlistBtn ">Start Practice</button>
+        </Link>
       </div>
     </div>
   );
