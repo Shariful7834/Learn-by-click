@@ -1,0 +1,13 @@
+.active {
+  background-color: rgb(220, 228, 140);
+  color: black;
+}
+
+Nav a {
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
+}
+Nav a:hover {
+  color: tomato;
+}
