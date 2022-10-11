@@ -1,0 +1,6 @@
+.questionPart{
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 5px 5px 15px rgb(248, 242, 242);
+    padding: 20px;
+}

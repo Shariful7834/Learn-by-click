@@ -37,13 +37,13 @@ const Question = ({ singlequestion }) => {
 
   return (
     <>
-      <div className="container w-50 h-50 bg-secondary mt-5">
+      <div className="container w-50 h-50 mt-5 questionPart">
         <h4>{question}</h4>
         <h3>
           {options.map((option) => (
-            <div key={option.id} className="text-center">
+            <div  className="text-center">
               <Button onClick={questionHandler} className="my-2 w-50">
-                <li className="text-start">{option}</li>
+                <li className="text-start" >{option}</li>
               </Button>
             </div>
           ))}
