@@ -6,33 +6,42 @@ import { useState } from "react";
 
 const Question = ({ singlequestion }) => {
   const { question, id, correctAnswer, options, name } = singlequestion;
-  console.log(singlequestion);
-  const [option, setOption] = useState([]);
+  // console.log(singlequestion);
+  console.log(correctAnswer);
+
   // console.log(singlequestion);
   // for (const option of options) {
   //   if (option === correctAnswer) {
   //     console.log("correct answer");
   //   }
   // }
+  const [ans, setAns] = useState([]);
   const questionHandler = () => {
-    for (const option of options) {
-      option === correctAnswer &&
+    options.map((opt) => {
+      console.log(opt);
+      setAns(opt);
+      if (opt === correctAnswer) {
         toast.success("Success! Right Answer", { autoClose: 500 });
-
-      // if (option === correctAnswer) {
-      // } else {
-      //   toast.error("Wrong Answer", { autoClose: 500 });
-      // }
-    }
+      }
+    });
   };
+  // for (const option of options) {
+  //   rightAnswer === correctAnswer &&
+  //     toast.success("Success! Right Answer", { autoClose: 500 });
+
+  //   // if (option === correctAnswer) {
+  //   // } else {
+  //   //   toast.error("Wrong Answer", { autoClose: 500 });
+  //   // }
+  // }
 
   return (
     <>
       <div className="container w-50 h-50 bg-secondary mt-5">
-        <h3>{question}</h3>
+        <h4>{question}</h4>
         <h3>
           {options.map((option) => (
-            <div className="text-center">
+            <div key={option.id} className="text-center">
               <Button onClick={questionHandler} className="my-2 w-50">
                 <li className="text-start">{option}</li>
               </Button>
