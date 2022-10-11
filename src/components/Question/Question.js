@@ -31,8 +31,9 @@ const Question = ({ singlequestion, handler }) => {
   // }
   return (
     <>
-      <div className="container w-50 h-50 bg-secondary mt-5">
+      <div className="container w-50 h-50 mt-5 questionPart">
         <h4>{question}</h4>
+<<<<<<< HEAD
         <div className="d-grid ">
           
           <Button onClick={() => setOpt(a)} className="mt-2">
@@ -48,6 +49,17 @@ const Question = ({ singlequestion, handler }) => {
             {d}
           </Button>
         </div>
+=======
+        <h3>
+          {options.map((option) => (
+            <div  className="text-center">
+              <Button onClick={questionHandler} className="my-2 w-50">
+                <li className="text-start" >{option}</li>
+              </Button>
+            </div>
+          ))}
+        </h3>
+>>>>>>> bc797b1adc2f333c5226031026a5ac8ab82a9184
       </div>
     </>
   );
