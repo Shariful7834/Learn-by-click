@@ -1,7 +1,7 @@
-## Education Site
-## Step by Step How I implemented the Project
+“*”## Education Site
+“*”## Step by Step How I implemented the Project
 
-## npx create-react-app ClickByLearning
+“*”## npx create-react-app ClickByLearning
 
 1. At first, I install the react app by using npx create-react-app with my project name.
 
