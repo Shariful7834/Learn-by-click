@@ -1,30 +1,15 @@
 import React from "react";
 import "./Question.css";
-import { Button } from "react-bootstrap";
+import { Button, ListGroup } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
 import { useState } from "react";
 
-const Question = ({ singlequestion }) => {
+const Question = ({ singlequestion, handler }) => {
   const { question, id, correctAnswer, options, name } = singlequestion;
-  // console.log(singlequestion);
-  console.log(correctAnswer);
+  // console.log(options);
+  const [a, b, c, d] = options;
+  // console.log(a)
 
-  // console.log(singlequestion);
-  // for (const option of options) {
-  //   if (option === correctAnswer) {
-  //     console.log("correct answer");
-  //   }
-  // }
-  const [ans, setAns] = useState([]);
-  const questionHandler = () => {
-    options.map((opt) => {
-      console.log(opt);
-      setAns(opt);
-      if (opt === correctAnswer) {
-        toast.success("Success! Right Answer", { autoClose: 500 });
-      }
-    });
-  };
   // for (const option of options) {
   //   rightAnswer === correctAnswer &&
   //     toast.success("Success! Right Answer", { autoClose: 500 });
@@ -34,23 +19,48 @@ const Question = ({ singlequestion }) => {
   //   //   toast.error("Wrong Answer", { autoClose: 500 });
   //   // }
   // }
+  const [opt, setOpt] = useState([]);
+  // console.log(opt);
 
+  opt === correctAnswer
+    ? toast.success("Success! Right Answer", { autoClose: 500 })
+    : toast.error("Wrong Answer", { autoClose: 500 });
+
+  // if (opt === correctAnswer) {
+  //   console.log("correct ans", opt, correctAnswer);
+  // }
   return (
     <>
       <div className="container w-50 h-50 bg-secondary mt-5">
         <h4>{question}</h4>
-        <h3>
-          {options.map((option) => (
-            <div key={option.id} className="text-center">
-              <Button onClick={questionHandler} className="my-2 w-50">
-                <li className="text-start">{option}</li>
-              </Button>
-            </div>
-          ))}
-        </h3>
+        <div className="d-grid ">
+          
+          <Button onClick={() => setOpt(a)} className="mt-2">
+            {a}
+          </Button>
+          <Button onClick={() => setOpt(b)} className="mt-2">
+            {b}
+          </Button>
+          <Button onClick={() => setOpt(c)} className="mt-2">
+            {c}
+          </Button>
+          <Button onClick={() => setOpt(d)} className="mt-2">
+            {d}
+          </Button>
+        </div>
       </div>
     </>
   );
 };
 
 export default Question;
+// <div key={option.id} className="text-center">
+//   <ListGroup
+//     className="my-3 text-center fs-5"
+//     defaultActiveKey="#link1"
+//   >
+//     <ListGroup.Item action onClick={questionHandler}>
+//       {option}
+//     </ListGroup.Item>
+//   </ListGroup>
+// </div>

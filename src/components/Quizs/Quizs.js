@@ -6,6 +6,9 @@ const Quizs = () => {
   const quizes = useLoaderData().data;
   // console.log(quizes);
   const { id, questions } = quizes;
+  const handler = (singlequestion) => {
+    console.log(handler);
+  };
   return (
     <div>
       <h1>
@@ -14,6 +17,7 @@ const Quizs = () => {
           <Question
             key={singlequestion.id}
             singlequestion={singlequestion}
+            handler={handler}
           ></Question>
         ))}
       </h1>
