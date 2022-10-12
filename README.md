@@ -1,8 +1,9 @@
-# Getting Started with Create React App
+* ## Education Site 
+“*”## Step by Step How I implemented the Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+“*”## npx create-react-app ClickByLearning
 
-## Available Scripts
+1. At first, I install the react app by using npx create-react-app with my project name.
 
 In the project directory, you can run:
 
