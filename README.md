@@ -1,20 +1,9 @@
-* ## Education Site 
-“*”## Step by Step How I implemented the Project
-
-“*”## npx create-react-app ClickByLearning
-
-1. At first, I install the react app by using npx create-react-app with my project name.
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
+* Education Site by Clicking
+## Basic Setups for this Projects
+# First, Install the application using npx
+# Second, Installed the react-bootstrap using - npm install react-bootstrap bootstrap
+# Third, Install the React Router for this project using - npm install react-router-dom
+# Installed the fontawesome for the icons 
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
