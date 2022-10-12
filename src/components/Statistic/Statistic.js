@@ -19,14 +19,13 @@ const Statistic = () => {
   return (
   
    
-      <div className="container  mt-5 ">
-     
+      <div className="container w-100 h-100  mt-5 ">
+  
         <LineChart
-          width={800}
-          height={330}
+          width={1000}
+          height={500}
           data={statistic}
-         
-
+          
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey='name' />
@@ -39,7 +38,7 @@ const Statistic = () => {
       
         </LineChart>
 
-  
+
     </div>
  
   
