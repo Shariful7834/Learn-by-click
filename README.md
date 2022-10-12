@@ -1,3 +1,4 @@
+* # Live site link : https://learnbyclick.netlify.app/
 * ## Education Site by Clicking
 * ## Basic Setups for this Projects
     #### 1. First, Install the application using npx
