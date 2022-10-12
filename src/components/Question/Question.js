@@ -1,10 +1,14 @@
 import React from "react";
 import "./Question.css";
-import { Button } from "react-bootstrap";
+import { Alert, Button } from "react-bootstrap";
 import { toast } from "react-toastify";
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEye } from '@fortawesome/free-solid-svg-icons'
+import { Link } from "react-router-dom";
 
-const Question = ({ singlequestion, handler }) => {
+
+const Question = ({ singlequestion }) => {
   const { question, correctAnswer, options } = singlequestion;
   // console.log(options);
   const [a, b, c, d] = options;
@@ -20,20 +24,41 @@ const Question = ({ singlequestion, handler }) => {
   //   // }
   // }
   const [opt, setOpt] = useState([]);
-  // console.log(opt);
+  const [eye, setEye] = useState([correctAnswer])
+   console.log(eye);
+const correct = (opt ===correctAnswer )
 
-  opt === correctAnswer
-    ? toast.success("Success! Right Answer", { autoClose: 500 })
-    : toast.error("Wrong Answer", { autoClose: 500 });
+  if(correct){
+    toast.success("Success! Right Answer", { autoClose: 500 })
+  } else{
+    toast.error("Wrong Answer", { autoClose: 500 });
+  }
+
+
+
+
 
   // if (opt === correctAnswer) {
   //   console.log("correct ans", opt, correctAnswer);
   // }
+ 
+
+
+  
   return (
     <>
      <div className="mainBox">
+      
      <div className="container w-50 h-50 bg-secondary mt-5 square bg-light rounded py-5 shadow-5">
-        <h5>Question{}{question}</h5>
+     <div className="d-flex justify-content-end">
+      <h1 className="d-none">{eye}</h1>
+     <a  onClick={()=> setEye(eye)}><FontAwesomeIcon icon={faEye} /> </a>
+     
+     
+      
+      </div>
+
+        <h5>Question: {question}</h5>
        
         <div className="d-grid   ">
           <Button onClick={() => setOpt(a)} className="addlistBtn mt-2 text-center">
