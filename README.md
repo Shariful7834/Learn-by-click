@@ -1,10 +1,12 @@
 * ## Education Site by Clicking
 * ## Basic Setups for this Projects
-1. First, Install the application using npx
-# Second, Installed the react-bootstrap using - npm install react-bootstrap bootstrap
-# Third, Install the React Router for this project using - npm install react-router-dom
-# Installed the fontawesome for the icons 
-### `npm test`
+    #### 1. First, Install the application using npx
+    #### 2.Second, Installed the react-bootstrap using - npm install react-bootstrap bootstrap
+    #### 3.Third, Install the React Router for this project using - npm install react-router-dom
+    #### 4.Installed the fontawesome for the icons 
+    
+* ## Components
+
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
