@@ -1,4 +1,4 @@
-##* Education Site by Clicking
+* ## Education Site by Clicking
 ## Basic Setups for this Projects
 # First, Install the application using npx
 # Second, Installed the react-bootstrap using - npm install react-bootstrap bootstrap
