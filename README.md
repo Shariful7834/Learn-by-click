@@ -6,7 +6,7 @@
     #### 4.Installed the fontawesome for the icons 
     
 * ## Components
-
+This project contains 11 components with css files as well as in the src folder i have added router and layout for the routing page.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
