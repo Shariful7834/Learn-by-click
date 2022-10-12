@@ -1,11 +1,11 @@
 import React from "react";
 import "./Question.css";
-import { Button, ListGroup } from "react-bootstrap";
-import { ToastContainer, toast } from "react-toastify";
+import { Button } from "react-bootstrap";
+import { toast } from "react-toastify";
 import { useState } from "react";
 
 const Question = ({ singlequestion, handler }) => {
-  const { question, id, correctAnswer, options, name } = singlequestion;
+  const { question, correctAnswer, options } = singlequestion;
   // console.log(options);
   const [a, b, c, d] = options;
   // console.log(a)
@@ -31,23 +31,26 @@ const Question = ({ singlequestion, handler }) => {
   // }
   return (
     <>
-      <div className="container w-50 h-50 bg-secondary mt-5">
-        <h4>{question}</h4>
-        <div className="d-grid ">
-          <Button onClick={() => setOpt(a)} className="mt-2">
-            {a}
+     <div className="mainBox">
+     <div className="container w-50 h-50 bg-secondary mt-5 square bg-light rounded py-5 shadow-5">
+        <h5>Question{}{question}</h5>
+       
+        <div className="d-grid   ">
+          <Button onClick={() => setOpt(a)} className="addlistBtn mt-2 text-center">
+            <li>{a}</li>
           </Button>
-          <Button onClick={() => setOpt(b)} className="mt-2">
-            {b}
+          <Button onClick={() => setOpt(b)} className=" addlistBtn mt-2 text-center">
+            <li>{b}</li>
           </Button>
-          <Button onClick={() => setOpt(c)} className="mt-2">
-            {c}
+          <Button onClick={() => setOpt(c)} className="addlistBtn mt-2 text-center">
+            <li>{c}</li>
           </Button>
-          <Button onClick={() => setOpt(d)} className="mt-2">
-            {d}
+          <Button onClick={() => setOpt(d)} className=" addlistBtn mt-2 text-center">
+            <li>{d}</li>
           </Button>
         </div>
       </div>
+     </div>
     </>
   );
 };
