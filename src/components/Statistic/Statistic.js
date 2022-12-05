@@ -23,6 +23,7 @@ const Statistic = () => {
 
   return (
     <div className="container  mt-5 ">
+      <h2>Statistic</h2>
       <LineChart width={800} height={330} data={statistic}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />

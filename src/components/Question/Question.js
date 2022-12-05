@@ -22,9 +22,9 @@ const Question = ({ singlequestion, handler }) => {
   const [opt, setOpt] = useState([]);
   // console.log(opt);
 
-  opt === correctAnswer
-    ? toast.success("Success! Right Answer", { autoClose: 500 })
-    : toast.error("Wrong Answer", { autoClose: 500 });
+  // opt === correctAnswer
+  //   ? toast.success("Success! Right Answer", { autoClose: 500 })
+  //   : toast.error("Wrong Answer", { autoClose: 500 });
 
   // if (opt === correctAnswer) {
   //   console.log("correct ans", opt, correctAnswer);
